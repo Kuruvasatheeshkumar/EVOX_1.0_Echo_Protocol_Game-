@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo Protocol — EVOX 1.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">EVOX 1.0 • PROMPT & PLAY</p>
+        <h1>Echo Protocol</h1>
+        <p class="tagline">Your past is the puzzle. Your future is the escape.</p>
+      </div>
+      <button id="soundBtn" class="icon-btn" aria-label="Toggle sound">🔊</button>
+    </header>
+
+    <section id="menuScreen" class="screen active">
+      <div class="hero-card">
+        <div class="core-orb">◈</div>
+        <h2>Break the loop.</h2>
+        <p>
+          You are trapped inside a collapsing digital archive. Collect every Memory Core
+          before the timer expires — but every move you make is recorded. When an echo appears,
+          it repeats your past route and can block your future.
+        </p>
+        <div class="feature-grid">
+          <div><strong>01</strong><span>Move through the grid</span></div>
+          <div><strong>02</strong><span>Collect all memory cores</span></div>
+          <div><strong>03</strong><span>Outsmart your echoes</span></div>
+          <div><strong>04</strong><span>Escape before time collapses</span></div>
+        </div>
+        <button id="startBtn" class="primary-btn">START PROTOCOL</button>
+        <p class="controls">Keyboard: <b>WASD / Arrow Keys</b> • Mobile: use the controls below</p>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+      <div class="hud">
+        <div class="stat"><span>LEVEL</span><b id="levelText">1</b></div>
+        <div class="stat"><span>CORES</span><b id="coresText">0/3</b></div>
+        <div class="stat"><span>TIME</span><b id="timeText">30</b></div>
+        <div class="stat"><span>SCORE</span><b id="scoreText">0</b></div>
+      </div>
+
+      <div class="game-wrap">
+        <div id="board" class="board" aria-label="Game board"></div>
+        <aside class="side-panel">
+          <div class="panel-card">
+            <span class="panel-label">MISSION</span>
+            <h3 id="missionText">Recover 3 Memory Cores</h3>
+            <p id="statusText">The archive is watching your moves.</p>
+          </div>
+          <div class="panel-card">
+            <span class="panel-label">ECHO LOG</span>
+            <div id="echoList" class="echo-list"><span>No echo yet.</span></div>
+          </div>
+          <button id="restartBtn" class="secondary-btn">RESTART LEVEL</button>
+          <button id="menuBtn" class="ghost-btn">RETURN TO MENU</button>
+        </aside>
+      </div>
+
+      <div class="mobile-controls">
+        <button data-move="up">▲</button>
+        <div><button data-move="left">◀</button><button data-move="down">▼</button><button data-move="right">▶</button></div>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-card">
+        <div id="resultIcon" class="result-icon">✓</div>
+        <p class="eyebrow">PROTOCOL RESULT</p>
+        <h2 id="resultTitle">Archive Escaped</h2>
+        <p id="resultMessage"></p>
+        <div class="result-stats">
+          <div><span>SCORE</span><b id="finalScore">0</b></div>
+          <div><span>LEVEL</span><b id="finalLevel">1</b></div>
+          <div><span>ECHOES</span><b id="finalEchoes">0</b></div>
+        </div>
+        <button id="playAgainBtn" class="primary-btn">PLAY AGAIN</button>
+      </div>
+    </section>
+
+    <footer>Built for EVOX 1.0 • Echo Protocol</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
